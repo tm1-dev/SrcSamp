@@ -1,0 +1,54 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+data_dir = GetProcessErrorFileDirectory()|'}sync_data';
+ExecuteCommand('cmd /c mkdir "'|data_dir|'"', 1);
+data_dir = data_dir|'\';
+
+### Cube data ###
+cubes_ctrl_dimension = '}Cubes';
+element_count = DIMSIZ(cubes_ctrl_dimension);
+
+element_index = 1;
+WHILE(element_index <= element_count);
+  cube_name = DIMNM(cubes_ctrl_dimension, element_index);
+  IF(SCAN('}', cube_name) <> 1);
+    IF(op = 1);
+      EXECUTEPROCESS('}src_imp_cube', 'cube_name', cube_name, 'data_dir', data_dir);
+    ELSE;
+      EXECUTEPROCESS('}src_exp_cube', 'cube_name', cube_name, 'data_dir', data_dir);
+    ENDIF;
+  ENDIF;
+  element_index = element_index + 1;
+END;
+
+### Element Attributes ###
+IF(op = 1);
+  EXECUTEPROCESS('}src_imp_attrs', 'data_dir', data_dir);
+ELSE;
+  EXECUTEPROCESS('}src_exp_attrs', 'data_dir', data_dir);
+ENDIF;
+
+### Element Attributes Data ###
+dimensions_ctrl_dimension = '}Dimensions';
+element_count = DIMSIZ(dimensions_ctrl_dimension);
+
+element_index = 1;
+WHILE(element_index <= element_count);
+  dimension_name = DIMNM(dimensions_ctrl_dimension, element_index);
+  IF(SCAN('}', dimension_name) <> 1);
+    attribute_dimension_name = '}ElementAttributes_'|dimension_name;
+    IF(CUBEEXISTS(attribute_dimension_name) = 1);
+      IF(op = 1);
+        EXECUTEPROCESS('}src_imp_cube', 'cube_name', attribute_dimension_name, 'data_dir', data_dir);
+      ELSE;
+        EXECUTEPROCESS('}src_exp_cube', 'cube_name', attribute_dimension_name, 'data_dir', data_dir);
+      ENDIF;
+    ENDIF;
+  ENDIF;
+  element_index = element_index + 1;
+END;
+
+#endregion

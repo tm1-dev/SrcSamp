@@ -1,0 +1,19 @@
+{
+	"@type":"Process",
+	"Name":"}src_exp_attrs",
+	"Code@Code.link":"}src_exp_attrs.code.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"data_dir",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

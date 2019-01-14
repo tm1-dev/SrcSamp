@@ -1,0 +1,29 @@
+{
+    "Version": "1.0",
+    "Name": "TM1 Server Template",
+    "Tasks":
+    {
+        "ImportData":
+        {
+            "Process": "Processes('}src_sync')",
+            "Parameters": [ { "Name": "op", "Value": "1" } ]
+        },
+        "ExportData":
+        {
+            "Process": "Processes('}src_sync')",
+            "Parameters": [ { "Name": "op", "Value": "0" } ]
+        }
+    },
+    "PostPull":
+    [ 
+        "Tasks('ImportData')"
+    ],
+    "PrePush":
+    [ 
+        "Tasks('ExportData')"
+    ],
+    "Files":
+    [
+        "}sync_data/*"
+    ]
+}
