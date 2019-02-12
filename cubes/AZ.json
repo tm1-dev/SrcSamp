@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"AZ",
+	"Rules@Code.link":"AZ.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('A')"
+		},
+		{
+			"@id":"Dimensions('Z')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"AZ.views/V.json"
+	]
+}

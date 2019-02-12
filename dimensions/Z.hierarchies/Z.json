@@ -1,0 +1,36 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Z",
+	"Elements":
+	[
+		{
+			"Name":"X",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Y",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Z",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"X",
+			"ComponentName":"Y",
+			"Weight":1
+		},
+		{
+			"ParentName":"X",
+			"ComponentName":"Z",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Z.subsets/S.json"
+	]
+}

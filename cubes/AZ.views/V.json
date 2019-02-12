@@ -1,0 +1,26 @@
+{
+	"@type":"NativeView",
+	"Name":"V",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Z')/Hierarchies('Z')/Subsets('S')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('A')/Hierarchies('A')/Subsets('AB')"
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

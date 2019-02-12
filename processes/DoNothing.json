@@ -1,0 +1,11 @@
+{
+	"@type":"Process",
+	"Name":"DoNothing",
+	"Code@Code.link":"DoNothing.code.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

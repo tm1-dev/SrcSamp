@@ -1,0 +1,34 @@
+{
+	"@type":"Chore",
+	"Name":"DoNothings",
+	"StartTime":"2019-02-12T01:45:58Z",
+	"ExecutionMode":"SingleCommit",
+	"Frequency":"P1DT00H00M00S",
+	"Tasks":
+	[
+		{
+			"Step":0,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('DoNothing')"
+			}
+		},
+		{
+			"Step":1,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('DoNothing')"
+			}
+		},
+		{
+			"Step":2,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('DoNothing')"
+			}
+		}
+	]
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"S",
+	"Expression":"{TM1FILTERBYLEVEL( {TM1SUBSETALL( [Z] )}, 0)}"
+}

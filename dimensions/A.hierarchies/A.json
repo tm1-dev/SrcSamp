@@ -1,0 +1,23 @@
+{
+	"@type":"Hierarchy",
+	"Name":"A",
+	"Elements":
+	[
+		{
+			"Name":"A",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"B",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"C",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"A.subsets/AB.json"
+	]
+}

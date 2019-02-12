@@ -8,6 +8,7 @@ file_name = data_dir|'attributes.csv';
 DatasourceType = 'CHARACTERDELIMITED';
 DatasourceNameForServer = file_name;
 SETINPUTCHARACTERSET('TM1CS_UTF8');
+
 #endregion
 #region Metadata
 
@@ -21,4 +22,5 @@ ELSEIF(V3@='AS');
 ELSEIF(V3@='AN');
   ATTRINSERT(V1, '', V2, 'N');
 ENDIF;
+
 #endregion

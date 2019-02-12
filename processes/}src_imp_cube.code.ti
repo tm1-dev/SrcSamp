@@ -19,6 +19,7 @@ last_dimension_name = TABDIM(cube_name, dimension_count);
 DatasourceType = 'CHARACTERDELIMITED';
 DatasourceNameForServer = file_name;
 SETINPUTCHARACTERSET('TM1CS_UTF8');
+
 #endregion
 #region Data
 
@@ -237,4 +238,5 @@ ELSEIF(dimension_count = 16);
     ENDIF;
   ENDIF;
 ENDIF;
+
 #endregion
